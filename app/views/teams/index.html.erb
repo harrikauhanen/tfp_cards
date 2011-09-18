@@ -1,0 +1,16 @@
+<h1>Teams and player cards</h1>
+
+<% @teams.each do |team| %>
+  <h2><%= team.name %></h2>
+
+  <% team.players.each do |player| %>
+    <div class="player">
+      <h3><%= player.name %></h3>
+      <%= player_image(player) %>
+      <span class="number"><%= player.number %></span>
+      <span class="position"><%= player.position %></span>
+      <span class="notes"><%= player.notes %></span>
+    </div>
+  <% end %>
+<% end %>
+
